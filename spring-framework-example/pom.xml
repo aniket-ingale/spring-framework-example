@@ -13,4 +13,34 @@
         <maven.compiler.target>13</maven.compiler.target>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring</artifactId>
+            <version>5.3.20</version>
+            <type>pom</type>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.1.2</version>
+            <configuration>
+                <archive>
+                    <manifest>
+                        <packageName>anix</packageName>
+                        <mainClass>anix.HelloWorld</mainClass>
+                    </manifest>
+                    <manifestEntries>
+                        <Created-By>Aniket</Created-By>
+                    </manifestEntries>
+                </archive>
+            </configuration>
+        </plugin>
+        </plugins>
+    </build>
 </project>
