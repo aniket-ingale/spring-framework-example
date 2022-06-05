@@ -8,7 +8,7 @@ public class AnnotationDemoApp {
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        Coach myCoach = context.getBean("thatTennisCoach", Coach.class);
+        Coach myCoach = context.getBean("tennisCoach", Coach.class);
 
         System.out.println("Workout is:" + myCoach.getDailyWorkout());
 

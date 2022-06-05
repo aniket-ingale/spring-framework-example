@@ -2,7 +2,7 @@ package anix;
 
 import org.springframework.stereotype.Component;
 
-@Component("thatTennisCoach")
+@Component
 public class TennisCoach implements Coach{
 
     @Override
