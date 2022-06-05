@@ -14,6 +14,10 @@ public class AnnotationDemoApp {
 
         System.out.println("Fortune is:" + myCoach.getDailyFortune());
 
+        SwimCoach mySwimCoach = context.getBean("swimCoach", SwimCoach.class);
+
+        System.out.println("Swim coach email:"+mySwimCoach.getEmail());
+
         context.close();
     }
 }
