@@ -6,6 +6,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class TennisCoach implements Coach{
 
+    //Field Injection
+    @Autowired
     public FortuneService fortuneService;
 
     // Constructor Injection
@@ -13,6 +15,14 @@ public class TennisCoach implements Coach{
 //    public TennisCoach(FortuneService fortuneService){
 //        this.fortuneService = fortuneService;
 //    }
+
+
+    // Setter Injection
+//    @Autowired
+//    public void setFortuneService(FortuneService fortuneService){
+//        this.fortuneService = fortuneService;
+//    }
+
 
     public TennisCoach(){
 
@@ -28,11 +38,7 @@ public class TennisCoach implements Coach{
         return this.fortuneService.getDailyFortune();
     }
 
-    // Setter Injection
-    @Autowired
-    public void setFortuneService(FortuneService fortuneService){
-        this.fortuneService = fortuneService;
-    }
+
 
 
 }
