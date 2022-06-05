@@ -8,9 +8,14 @@ public class TennisCoach implements Coach{
 
     public FortuneService fortuneService;
 
-    @Autowired
-    public TennisCoach(FortuneService fortuneService){
-        this.fortuneService = fortuneService;
+    // Constructor Injection
+//    @Autowired
+//    public TennisCoach(FortuneService fortuneService){
+//        this.fortuneService = fortuneService;
+//    }
+
+    public TennisCoach(){
+
     }
 
     @Override
@@ -22,4 +27,12 @@ public class TennisCoach implements Coach{
     public String getDailyFortune(){
         return this.fortuneService.getDailyFortune();
     }
+
+    // Setter Injection
+    @Autowired
+    public void setFortuneService(FortuneService fortuneService){
+        this.fortuneService = fortuneService;
+    }
+
+
 }
