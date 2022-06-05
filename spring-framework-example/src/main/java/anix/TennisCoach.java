@@ -9,7 +9,7 @@ public class TennisCoach implements Coach{
 
     //Field Injection
     @Autowired
-    @Qualifier("happyFortuneService")
+    @Qualifier("randomFortuneService")
     public FortuneService fortuneService;
 
     // Constructor Injection
