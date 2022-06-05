@@ -1,6 +1,7 @@
 package anix;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -8,6 +9,7 @@ public class TennisCoach implements Coach{
 
     //Field Injection
     @Autowired
+    @Qualifier("happyFortuneService")
     public FortuneService fortuneService;
 
     // Constructor Injection
