@@ -19,6 +19,8 @@ public class AnnotationDemoApp {
 
         System.out.println("Swim coach email:"+mySwimCoach.getEmail());
 
+        mySwimCoach.apiCall();
+
         context.close();
     }
 }

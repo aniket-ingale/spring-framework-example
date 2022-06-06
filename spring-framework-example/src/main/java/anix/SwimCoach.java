@@ -19,6 +19,10 @@ public class SwimCoach implements Coach{
     @Qualifier("randomFortuneService")
     public FortuneService fortuneService;
 
+    @Autowired
+    public ThirdPartyInterface remoteClient;
+
+
     // Constructor Injection
 //    @Autowired
 //    public TennisCoach(FortuneService fortuneService){
@@ -54,6 +58,11 @@ public class SwimCoach implements Coach{
 
     public String getTeam() {
         return team;
+    }
+
+
+    public void apiCall(){
+        remoteClient.apiCall();
     }
 
 }
