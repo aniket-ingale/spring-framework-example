@@ -7,7 +7,7 @@ import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @ComponentScan("anix")
-@PropertySource(value = { "classpath:sport.properties" })
+@PropertySource(value = { "classpath:application.properties" })
 public class SportConfig {
 
     @Bean
